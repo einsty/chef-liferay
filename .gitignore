@@ -1,6 +1,9 @@
 .vagrant/*
 Berksfile.lock
-vendor/cookbooks
 .project
 .buildpath
 Gemfile.lock
+vendor/cookbooks
+.bundle/*
+.kitchen/
+.kitchen.local.yml

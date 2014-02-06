@@ -1,8 +1,7 @@
 task :default=> [
   :foodcritic,
-  #:berks,
-  #:knife,
-  #:chefspec
+  :berks,
+  :chefspec
 ]
 
 desc "Berksfile install"
@@ -13,12 +12,7 @@ end
 
 desc "Foodcritic linting"
 task :foodcritic do
-  sh "foodcritic . -f any -f ~FC033"
-end
-
-desc "Knife test"
-task :knife do
-  sh "bundle exec knife cookbook test liferay -o vendor/cookbooks"
+  sh " bundle exec foodcritic ."
 end
 
 desc "ChefSpec Unit Tests"
