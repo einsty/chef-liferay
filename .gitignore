@@ -1,3 +1,6 @@
 .vagrant/*
 Berksfile.lock
 vendor/cookbooks
+.project
+.buildpath
+Gemfile.lock
