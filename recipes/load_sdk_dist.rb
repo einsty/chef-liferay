@@ -22,5 +22,5 @@
 include_recipe "liferay"
 
 execute "load liferay components" do
-	command "sudo cp /vagrant/dist/*.war #{node['liferay']['install_directory']}/liferay/deploy"
+	command "sudo -u #{node['liferay']['user']} cp /vagrant/dist/*.war #{node['liferay']['install_directory']}/liferay/deploy"
 end
