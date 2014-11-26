@@ -1,5 +1,7 @@
 .vagrant/*
 Berksfile.lock
+.project
+.buildpath
 Gemfile.lock
 /.buildpath
 vendor/cookbooks
