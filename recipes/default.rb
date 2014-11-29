@@ -30,12 +30,7 @@ include_recipe "unzip"
 include_recipe "imagemagick"
 include_recipe "java"
 
-user node['liferay']['user'] do
-  comment "Liferay User"
-  home "/home/#{node['liferay']['user']}"
-  shell "/bin/bash"
-  supports :manage_home=>true
-end
+include_recipe "liferay::user"
 
 remote_file "#{node['liferay']['download_directory']}/#{node['liferay']['download_filename']}" do
   owner node['liferay']['user']
@@ -68,12 +63,6 @@ link "#{node['liferay']['install_directory']}/liferay/tomcat" do
   owner node['liferay']['user']
   group node['liferay']['group']
   to "#{node['liferay']['install_directory']}/#{node['liferay']['download_version']}/#{node['liferay']['tomcat_version']}"
-end
-
-Dir.glob("#{node['liferay']['install_directory']}/liferay/tomcat/bin/*.bat").each do |bat_file|
-  file bat_file do
-    action :delete
-  end
 end
 
 template "#{node['liferay']['install_directory']}/liferay/tomcat/bin/setenv.sh" do
