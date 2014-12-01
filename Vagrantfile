@@ -7,6 +7,8 @@ Vagrant.configure("2") do |config|
 
   config.berkshelf.enabled = true
 
+  config.berkshelf.berksfile_path = "./Berksfile"
+
   if Vagrant.has_plugin?("vagrant-cachier")
     config.cache.auto_detect = true
   end
