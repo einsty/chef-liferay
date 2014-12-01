@@ -6,6 +6,8 @@ description       "Installs and configures Liferay"
 version           "0.13.3"
 
 depends "apt"
+depends "users"
+depends "sudo"
 depends "unzip"
 depends "imagemagick"
 depends "java"

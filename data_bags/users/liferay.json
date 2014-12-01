@@ -1,0 +1,8 @@
+{
+    "id": "liferay",
+    "uid": 4000,
+    "comment": "Service account to run tomcat for Liferay",
+    "password": "$1$NBrSqe/p$wCWk0mqfsG2Y2KWdXgsOY1",
+    "groups": ["liferay", "www-data"],
+    "shell": "/bin/bash"
+}

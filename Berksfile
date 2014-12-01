@@ -3,6 +3,9 @@ source "https://supermarket.getchef.com"
 metadata
 
 cookbook 'apt'
+cookbook 'chef-solo-search', github: 'edelight/chef-solo-search'
+cookbook 'users'
+cookbook 'sudo'
 cookbook 'ant', github: 'thirdwavellc/ant'
 cookbook 'unzip', github: 'thirdwavellc/chef-unzip'
 cookbook 'imagemagick'

@@ -23,6 +23,7 @@
 # User
 default['liferay']['user'] = "liferay"
 default['liferay']['group'] = "liferay"
+default['liferay']['group_id'] = 4000
 
 # Install
 default['liferay']['install_directory'] = "/opt"
