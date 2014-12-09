@@ -34,7 +34,6 @@ Vagrant.configure("2") do |config|
       chef.data_bags_path = "data_bags"
       
       chef.add_recipe "chef-solo-search"
-      chef.add_recipe "liferay::users"
       chef.add_recipe "liferay::bundle"
       chef.add_recipe "mysql-connector::java"
 
